@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LoginScreen" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/Primary_Color</item>
+        <item name="colorPrimaryVariant">@color/Primary_Color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/Secondary_Color</item>
+        <item name="colorSecondaryVariant">@color/Secondary_Color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status Bar Color -->
+        <item name="android:statusBarColor">@color/Primary_Color</item>
+    </style>
+
+    <style name="Theme.LoginScreen" parent="Base.Theme.LoginScreen" />
+
+</resources>

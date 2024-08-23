@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboardbg"
+    tools:context=".DashBoard">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="chart_ic" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/dashboardName"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/adminimg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/admin"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardName"
+            tools:layout_editor_absoluteY="4dp" />
+
+
+        <ImageView
+            android:id="@+id/weatherImage"
+            android:layout_width="76dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="@+id/dashboardName"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardName" />
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="@+id/weatherImage"
+            app:layout_constraintTop_toTopOf="@+id/weatherImage" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="171dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="@+id/weatherImage"
+            app:layout_constraintTop_toBottomOf="@+id/days" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Mostly sunny"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherImage" />
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherImage">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/humidity"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/humiditytxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Humidity"
+                        android:textColor="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/humidityimg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toStartOf="@+id/humiditytxt"
+                        android:src="@drawable/humidity" />
+
+                    <TextView
+                        android:id="@+id/humidity_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="111dp"
+                        android:layout_below="@id/humiditytxt"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="-116dp"
+                        android:layout_toStartOf="@id/humiditytxt"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:textSize="32dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/temperature"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/temperaturetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Temperature"
+                        android:textColor="#DC2515" />
+
+                    <ImageView
+                        android:id="@+id/temperatureimg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toStartOf="@+id/temperaturetxt"
+                        android:src="@drawable/hot" />
+
+                    <TextView
+                        android:id="@+id/temperature_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        android:layout_below="@id/temperaturetxt"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:textSize="35dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rainfall"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/rainfalltxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Rainfall"
+                        android:textColor="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/rainfallimg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toStartOf="@+id/rainfalltxt"
+                        android:src="@drawable/rainy" />
+
+                    <TextView
+                        android:id="@+id/rainfall_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="111dp"
+                        android:layout_below="@id/rainfalltxt"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="-112dp"
+                        android:layout_toStartOf="@id/rainfalltxt"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:textSize="35dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/windSpeed"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/windSpeedtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Wind Speed"
+                        android:textColor="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/windSpeedimg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toStartOf="@+id/windSpeedtxt"
+                        android:src="@drawable/storm" />
+
+                    <TextView
+                        android:id="@+id/windSpeed_tv"
+                        android:layout_width="174dp"
+                        android:layout_height="108dp"
+                        android:layout_below="@id/windSpeedtxt"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="-126dp"
+                        android:layout_toStartOf="@id/windSpeedtxt"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:textSize="35dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

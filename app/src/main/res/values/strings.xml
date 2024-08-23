@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Indoor Quality Monitoring</string>
+    <string name="Login" />
+    <string name="forgot_password"><a href="">Forgot Password</a></string>
+    <string name="or_sign_up"><a href="">Create your account </a></string>
+    <string name="already_have_an_account_log_in">Already have an account?<a href=""> Log in</a></string>
+    <string name="reset_your_password"><a href="">Reset your password?</a></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select">Select Attribute</string>
+    <string name="timeframe">Timeframe</string>
+    <string name="ending">Ending</string>
+</resources>
